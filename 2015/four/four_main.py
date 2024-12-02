@@ -1,6 +1,6 @@
 import hashlib
 
-def find_min_number(input="iwrupvqb", target_zeros=5):
+def find_min_number(input="iwrupvqb", target_zeros=6):
      number = 0
      prefix = '0' * target_zeros
     
