@@ -14,4 +14,24 @@ def get_wrapping_paper(input):
 
     return total
 
-print(get_wrapping_paper(data))
+def get_ribbon(input):
+    total = 0
+
+    for str in input:
+        s = str.split('x')
+        l = int(s[0])
+        w = int(s[1])
+        h = int(s[2])
+
+        nums = [l, w, h]
+        sorted_nums = sorted(nums)
+
+        smallest = sorted_nums[0]
+        second_smallest = sorted_nums[1]
+
+        total += 2 * (smallest + second_smallest) + (l * w * h)
+
+    return total
+
+
+print(get_ribbon(data))
