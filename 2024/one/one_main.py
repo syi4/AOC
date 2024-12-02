@@ -14,12 +14,21 @@ with open('one_input.txt', 'r') as content:
 def get_distance(left_list, right_list):
     total = 0
 
-    for i, dist in enumerate(left_list):
+    for i, _ in enumerate(left_list):
         diff = left_list[i] - right_list[i]
         total += abs(diff)
 
     return total
 
-print(get_distance(left_list, right_list))
+def get_similarity(left_list, right_list):
+    total = 0
+
+    for i, _ in enumerate(left_list):
+        count = right_list.count(left_list[i])
+        total += count * left_list[i]
+
+    return total
+
+print(get_similarity(left_list, right_list))
 
 
